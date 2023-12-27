@@ -2,7 +2,7 @@
     "paths": {
         "/": "index"
     },
-    "notFound": "404",
+    "notFoundPage": "404",
     "languages": {
         "en": "English",
         "de": "Deutsch"
