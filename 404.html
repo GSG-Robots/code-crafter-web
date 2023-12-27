@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-langmng="translate:content=title;">404 - Page not found</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://langmng.jojojux.de/langmng.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body data-langmng="set:pageId=404;set:hideUntilTranslated=true;set:fadeIn=true;">
+    <header>
+        <h1 data-langmng="translate:content=header;">pro-grammierer</h1>
+    </header>
+
+    <main>
+        <h2 data-langmng="translate:content=subtitle-1;">404 - File not found.</h2>
+
+        <p data-langmng="translate:content=details;">
+            Die angeforderte Seite <span id="more_info" data-run="include_error_path(this)" data-langmng-include="urlpath"></span> konnte nicht gefunden werden.
+            <br>
+            <br>
+            <a href="/" data-langmng-include="backToHomeLink" data-langmng="translate:content=backToHomeLink">Zurück zur Startseite</a>
+        </p>
+    </main>
+
+    <footer data-langmng="translate:content=footer;">
+        Made by <a href="https://gsgrobots.wixsite.com/gsg-robots" data-langmng-include="link1" data-langmng="translate:content=footer-homepage;">GSG Robots</a> | <a
+            href="https://gsgrobots.wixsite.com/gsg-robots/disclaimer" data-langmng-include="link2" data-langmng="translate:content=footer-privacy;">Datenschutz / Impressum</a> | <a
+            href="https://gsgrobots.wixsite.com/gsg-robots/kontakt" data-langmng-include="link3" data-langmng="translate:content=footer-contact;">Kontakt</a>
+            <br>
+        <span data-langmng="placeFeature=languageSelect;" data-langmng-include="langSelect"></span>
+    </footer>
+</body>
+
+</html>

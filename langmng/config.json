@@ -1,0 +1,13 @@
+{
+    "paths": {
+        "/": "index"
+    },
+    "notFound": "404",
+    "languages": {
+        "en": "English",
+        "de": "Deutsch"
+    },
+    "defaultLanguage": "de",
+    "fallbackLanguage": "de",
+    "translationVersion": 4
+}
