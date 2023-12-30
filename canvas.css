@@ -1,0 +1,53 @@
+#canvas {
+    border: 5px solid black;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: clip;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.block {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    margin: 0px;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.active {
+    background-color: #ff0000;
+}
+
+#numrow {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.colnum {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    text-align: center;
+    border: 1px solid black;
+
+    background-color: rgb(206, 206, 206);
+
+    user-select: none;
+}
