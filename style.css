@@ -17,11 +17,26 @@ header {
     border-bottom-right-radius: 10px;
 }
 
+.center {
+    display: block;
+    text-align: center;
+}
+
 main {
     margin-top: 20px;
     background-color: #ffffff;
     color: #000000;
     padding: 7.5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+@media screen and (width < 600px) {
+    main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
 }
 
 footer {
@@ -47,5 +62,13 @@ code {
 
 a {
     color: rgb(64, 64, 180);
+    text-decoration: none;
+}
+
+a.btn {
+    background-color: #e0e0e0;
+    color: #000000;
+    padding: 15px;
+    border-radius: 7.5px;
     text-decoration: none;
 }
