@@ -1,5 +1,6 @@
 from PIL import Image
 
+
 def pngtosvg(filename):
     im = Image.open(filename)
     width, height = im.size
@@ -10,5 +11,5 @@ def pngtosvg(filename):
             print("<rect x=\"{}\" y=\"{}\" width=\"1\" height=\"1\" fill=\"rgb({},{},{})\" />".format(x, y, r, g, b))
     print("</svg>")
 
-    
+
 pngtosvg("pixil-frame-0_3.png")
