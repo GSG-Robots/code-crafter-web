@@ -58,8 +58,9 @@ footer {
 
 footer > * {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.767);
-    box-shadow: 0px 5px 15px 15px rgba(255, 255, 255, 0.767);;
+    background-color: rgba(223, 113, 99, 0.637);
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 10px rgba(223, 113, 99, 0.637);
 }
 
 code {
@@ -74,10 +75,28 @@ a {
     text-decoration: none;
 }
 
-a.btn {
+.langmng-selector, .btn {
     background-color: #e0e0e0;
     color: #000000;
     padding: 15px;
-    border-radius: 7.5px;
+    border-radius: 3px;
     text-decoration: none;
+
+
+    cursor: pointer;
+    background: url('/assets/Button.png') no-repeat;
+    padding-left: 17.5px;
+    padding-right: 12.5px;
+    padding-top: 12.5px;
+    padding-bottom: 17.5px;
+    background-size: 100% 100%;
+    border: none;
+    outline: none;
+}
+
+.langmng-selector, .btn.small-padding {
+    padding-left: 12.5px;
+    padding-right: 7.5px;
+    padding-top: 7.5px;
+    padding-bottom: 12.5px;
 }
