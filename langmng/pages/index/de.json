@@ -3,7 +3,7 @@
     "header": "pro-grammierer",
     "subtitle-1": "Was ist pro-grammierer?",
     "content-1": "<b>pro-grammierer ist ein Projekt von GSG Robots</b>, um Schülerinnen und Schülern das Programmieren näher zu bringen.",
-    "start-button": "> Starten",
+    "start-button": "Starten",
     "footer": "Gemacht von {link1} | {link2} | {link3}<br>{langSelect}",
     "footer-privacy": "Datenschutz & Impressum",
     "footer-homepage": "GSG Robots",

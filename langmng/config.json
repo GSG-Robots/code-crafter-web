@@ -1,6 +1,8 @@
 {
     "paths": {
-        "/": "index"
+        "/": "index",
+        "/paint": "paint",
+        "/paint.html": "paint"
     },
     "notFoundPage": "404",
     "languages": {
@@ -9,5 +11,5 @@
     },
     "defaultLanguage": "de",
     "fallbackLanguage": "de",
-    "translationVersion": 4
+    "translationVersion": 5
 }

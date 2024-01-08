@@ -1,0 +1,105 @@
+#canvas {
+    border: 5px solid black;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: clip;
+
+    user-select: none;
+    scroll-behavior: smooth;
+
+    cursor: url("/pen-tool.svg") 1 1, auto;
+}
+
+#canvas.rightclick {
+    cursor: url("/eraser-tool.svg") 8 22, auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#toolSelector {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    margin: 2px;
+    margin-top: 15px;
+
+    border: 3px solid black;
+    overflow-x: scroll;
+    overflow-y: clip;
+
+    width: 100%;
+
+    cursor: grab;
+}
+
+#toolSelector:active {
+    cursor: grabbing;
+}
+
+.toolButton {
+    all: unset;
+    user-select: none;
+    border: 1px solid rgb(160, 160, 160);
+    height: 40px;
+    width: 40px;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 50%;
+    transition: border-radius 0.2s ease-in-out;
+}
+
+.toolButton.selected {
+    border-radius: 25%;
+
+    cursor: url("/pen-tool.svg") 1 1, auto;
+}
+
+
+.block {
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.active {
+    background-color: #ff0000;
+}
+
+#numrow {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    cursor: url("/arrow-left-right.svg") 12 12, auto;
+}
+
+.colnum {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    text-align: center;
+    border: 1px solid black;
+
+    background-color: rgb(206, 206, 206);
+}

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-langmng="translate:content=title;">404 - Seite nicht gefunden</title>
+    <title data-langmng="translate:content=title;">Map-Painter | pro-grammierer</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="https://langmng.pages.dev/langmng.js"></script>
-    <script src="script.js"></script>
 
-
+    <link rel="stylesheet" href="canvas.css">
+    <script src="canvas.js"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -24,25 +23,14 @@
     <meta name="msapplication-config" content="/icons/browserconfig.xml">
     <meta name="theme-color" content="#b9ffcf">
 </head>
-
-<body data-langmng="set:pageId=404;set:hideUntilTranslated=true;set:fadeIn=true;">
+<body>
     <header>
-        <h1 data-langmng="translate:content=header;">pro-grammierer</h1>
+        <h1 data-langmng="translate:content=header;">Map-Painter</h1>
     </header>
-
     <main>
-        <h2 data-langmng="translate:content=subtitle-1;">404 - Seite nicht gefunden</h2>
-
-        <p data-langmng="translate:content=details;">
-            Die angeforderte Seite <span id="more_info" data-run="include_error_path(this)"
-                data-langmng-include="urlpath"></span> konnte nicht gefunden werden.
-            <br>
-            <br>
-            <a href="/" data-langmng-include="backToHomeLink" data-langmng="translate:content=backToHomeLink">Zurück zur
-                Startseite</a>
-        </p>
+        <div id="canvas"></div>
+        <div id="toolSelector"></div>
     </main>
-
     <footer data-langmng="translate:content=footer;">
         Gemacht von <a href="https://gsgrobots.wixsite.com/gsg-robots" data-langmng-include="link1"
             data-langmng="translate:content=footer-homepage;">GSG Robots</a> | <a
@@ -54,5 +42,4 @@
         <span data-langmng="placeFeature=languageSelect;" data-langmng-include="langSelect"></span>
     </footer>
 </body>
-
 </html>
