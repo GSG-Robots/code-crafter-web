@@ -1,6 +1,6 @@
 {
-    "title": "404 - pro-grammierer",
-    "header": "pro-grammierer",
+    "title": "404 - CodeCrafter",
+    "header": "CodeCrafter",
     "subtitle-1": "404 - Seite nicht gefunden",
     "details": "Die angeforderte Seite {urlpath} konnte nicht gefunden werden.<br><br>{backToHomeLink}",
     "backToHomeLink": "Zurück zur Startseite",
