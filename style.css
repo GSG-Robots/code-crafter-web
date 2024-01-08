@@ -71,8 +71,8 @@ code {
 }
 
 a {
-    color: rgb(64, 64, 180);
-    text-decoration: none;
+    color: #000274;
+    text-decoration: underline;
 }
 
 .langmng-selector, .btn {
