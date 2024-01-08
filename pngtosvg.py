@@ -4,7 +4,7 @@ from PIL import Image
 def pngtosvg(filename):
     """
 
-    :param filename: 
+    :param filename:
 
     """
     im = Image.open(filename)
