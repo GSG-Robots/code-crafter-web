@@ -2,6 +2,11 @@ from PIL import Image
 
 
 def pngtosvg(filename):
+    """
+
+    :param filename: 
+
+    """
     im = Image.open(filename)
     width, height = im.size
     print(
