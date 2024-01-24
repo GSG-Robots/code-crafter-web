@@ -258,7 +258,7 @@ function checkInView(elem) {
     const canvas_right_border = canvas_left_border + canvas.offsetWidth + 3;
     const block_left_border = elem.offsetLeft - elem.offsetWidth;
     const block_right_border = block_left_border + elem.offsetWidth;
-    return { 
+    return {
         left_left_partially: block_left_border < canvas_left_border,
         left_right_partially: block_right_border > canvas_right_border,
         left_left_complete: block_right_border < canvas_left_border,
