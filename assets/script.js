@@ -11,17 +11,17 @@ function run_data_load_from() {
   for (let elm of elms) {
     let code = elm.getAttribute("data-load-from");
     elm.innerHTML = "Lade...";
-    fetch(code, {"headers" : {"Access-Control-Allow-Origin" : "*"}})
-        .then(response => response.text())
-        .then(text => {
-          elm.innerHTML = text;
-          run_data_run(elm);
-        })
-        .catch(error => {
-          console.error(error);
-          elm.innerHTML =
-              "Fehler beim Laden von Inhalten: <code>" + error + "</code>";
-        });
+    fetch(code, { headers: { "Access-Control-Allow-Origin": "*" } })
+      .then((response) => response.text())
+      .then((text) => {
+        elm.innerHTML = text;
+        run_data_run(elm);
+      })
+      .catch((error) => {
+        console.error(error);
+        elm.innerHTML =
+          "Fehler beim Laden von Inhalten: <code>" + error + "</code>";
+      });
   }
 }
 
@@ -34,7 +34,7 @@ function run_data_run(scope) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   run_data_run();
   run_data_load_from();
 });
