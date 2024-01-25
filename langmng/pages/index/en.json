@@ -1,11 +1,11 @@
 {
-    "title": "Home - pro-grammierer",
-    "header": "pro-grammierer",
-    "subtitle-1": "What is pro-grammierer?",
-    "content-1": "<b>pro-grammierer is a project by GSG Robots</b>, to make programming more fun for students.",
-    "start-button": "Start",
-    "footer": "Made by {link1} | {link2} | {link3}<br>{langSelect}",
-    "footer-homepage": "GSG Robots",
-    "footer-privacy": "Privacy",
-    "footer-contact": "Contact us"
+  "title": "Home - CodeCrafter",
+  "header": "CodeCrafter",
+  "subtitle-1": "What is CodeCrafter?",
+  "content-1": "<b>CodeCrafter is a project by GSG Robots</b>, to make programming more fun for students.",
+  "start-button": "Start",
+  "footer": "Made by {link1} | {link2} | {link3}<br>{langSelect}",
+  "footer-homepage": "GSG Robots",
+  "footer-privacy": "Privacy",
+  "footer-contact": "Contact us"
 }

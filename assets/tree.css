@@ -1,0 +1,13 @@
+#tree {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+
+
+    display: block;
+    overflow-x: hidden;
+    overflow-y: clip;
+
+    user-select: none;
+    scroll-behavior: smooth;
+}

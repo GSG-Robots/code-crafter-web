@@ -1,6 +1,6 @@
 {
-    "name": "pro-grammierer",
-    "short_name": "pro-grammierer",
+    "name": "CodeCrafter",
+    "short_name": "CodeCrafter",
     "icons": [
         {
             "src": "/icons/android-chrome-192x192.png",
@@ -15,6 +15,6 @@
     ],
     "theme_color": "#b9ffcf",
     "background_color": "#b9ffcf",
-    "start_url": "https://pro-grammierer.pages.dev/",
+    "start_url": "https://pro-grammierer.pages.dev/use",
     "display": "standalone"
 }
