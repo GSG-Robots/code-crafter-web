@@ -6,7 +6,7 @@ from prgrmr import *
 
 Was genau das tut, wirst du später lernen. Für den Moment reicht es zu wissen, dass es dir erlaubt, die Funktionen zu benutzen, die du in diesem Kurs kennenlernst.
 
-Jetzt sind wir nur noch einen Schritt von deinem eigenen Spiel entfernt.  
+Jetzt sind wir nur noch einen Schritt von deinem eigenen Spiel entfernt.
 Füge die folgende Zeile in den Editor ein:
 
 ```python
@@ -24,6 +24,5 @@ run()
 ```
 
 Klicke auf den grünen "Run"-Button oben rechts im Editor, um dein Spiel zu starten.
-
 
 Das Spiel sollte jetzt in einem neuen Fenster erscheinen.

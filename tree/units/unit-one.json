@@ -1,10 +1,10 @@
 {
-    "name": "Your own game!",
-    "description": "Creating your own game!",
-    "lessons": [
-        {
-            "name": "Getting started",
-            "view-tutorial": ""
-        }
-    ]
+  "name": "Your own game!",
+  "description": "Creating your own game!",
+  "lessons": [
+    {
+      "name": "Getting started",
+      "view-tutorial": ""
+    }
+  ]
 }

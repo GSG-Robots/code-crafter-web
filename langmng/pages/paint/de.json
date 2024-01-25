@@ -1,9 +1,9 @@
 {
-    "title": "Map-Painter | CodeCrafter",
-    "header": "CodeCrafter",
-    "content-1": "Map-Painter is a tool to create maps for your own game. You can create maps with tiles and objects. You can also create your own tiles and objects.",
-    "footer": "Gemacht von {link1} | {link2} | {link3}<br>{langSelect}",
-    "footer-privacy": "Datenschutz & Impressum",
-    "footer-homepage": "GSG Robots",
-    "footer-contact": "Kontakt"
+  "title": "Map-Painter | CodeCrafter",
+  "header": "CodeCrafter",
+  "content-1": "Map-Painter is a tool to create maps for your own game. You can create maps with tiles and objects. You can also create your own tiles and objects.",
+  "footer": "Gemacht von {link1} | {link2} | {link3}<br>{langSelect}",
+  "footer-privacy": "Datenschutz & Impressum",
+  "footer-homepage": "GSG Robots",
+  "footer-contact": "Kontakt"
 }
