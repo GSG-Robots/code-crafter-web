@@ -25,5 +25,4 @@ run()
 
 Klicke auf den grünen "Run"-Button oben rechts im Editor, um dein Spiel zu starten.
 
-
 Das Spiel sollte jetzt in einem neuen Fenster erscheinen.
