@@ -27,22 +27,20 @@ const converter = new showdown.Converter({
 });
 converter.setFlavor('github');
 
-const gfmAlertStyles = `
+const markdownStylesExtra = `
 :host blockquote {
     margin: 0;
     padding: 1rem 1.25rem;
     border-left: .25rem solid #dfe2e5;
-}
-
-:host .alert {
     margin-bottom: 1rem;
-    border-color: #434b55;
 }
 
 :host blockquote h1 {
     all: unset;
     margin-top: 0;
     margin-bottom: .25rem;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 :host blockquote p:not(h1 + *) {
@@ -53,43 +51,43 @@ const gfmAlertStyles = `
     margin-bottom: 0;
 }
 
-:host .alert.alert-note {
+:host blockquote.alert.alert-note {
     border-color: #306cc8;
 }
 
-:host .alert.alert-note > h1 {
+:host blockquote.alert.alert-note > h1 {
     color: #306cc8;
 }
 
-:host .alert.alert-tip {
+:host blockquote.alert.alert-tip {
     border-color: #55aa58;
 }
 
-:host .alert.alert-tip > h1 {
+:host blockquote.alert.alert-tip > h1 {
     color: #55aa58;
 }
 
-:host .alert.alert-important {
+:host blockquote.alert.alert-important {
     border-color: #9a70e3;
 }
 
-:host .alert.alert-important > h1 {
+:host blockquote.alert.alert-important > h1 {
     color: #9a70e3;
 }
 
-:host .alert.alert-warning {
+:host blockquote.alert.alert-warning {
     border-color: #c69026;
 }
 
-:host .alert.alert-warning > h1 {
+:host blockquote.alert.alert-warning > h1 {
     color: #c69026;
 }
 
-:host .alert.alert-caution {
+:host blockquote.alert.alert-caution {
     border-color: #e8554d;
 }
 
-:host .alert.alert-caution > h1 {
+:host blockquote.alert.alert-caution > h1 {
     color: #e8554d;
 }
 
@@ -116,6 +114,7 @@ const gfmAlertStyles = `
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 :host pre {
@@ -124,6 +123,10 @@ const gfmAlertStyles = `
     border-radius: .25rem;
     background-color: #434b55;
     margin-bottom: 1rem;
+}
+
+:host pre ::selection {
+    background-color: rgba(43, 52, 55, 1);
 }
 `;
 
@@ -172,6 +175,13 @@ function ownPlugin() {
                     text = text.replace(/<pre><code class=".+?language-(\S+?)(?:\s+(?:.+?)?)?">(.*)<\/code><\/pre>/gsi, function (wholeMatch, lang, content) {
                         return '<pre><code class="language-' + lang + '">' + hljs.highlight(content, { language: lang }).value + '</code></pre>';
                     });
+                    return text;
+                }
+            },
+            {
+                type: "output",
+                filter: function (text) {
+                    text = text.replace(/  <br(?:\s|\/)*>/gsi, '</p><p>');
                     return text;
                 }
             }
@@ -257,7 +267,7 @@ export default class MarkdownDisplay extends HTMLElement {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <style>
-            ${gfmAlertStyles}
+            ${markdownStylesExtra}
         </style>
         ${html}
         `;

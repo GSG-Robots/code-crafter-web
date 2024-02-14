@@ -7,18 +7,14 @@
     <title data-langmng="translate:content=title;">Installieren von CodeCrafter</title>
 
     <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/coding.css">
     <!-- <script src="https://langmng.pages.dev/langmng.js"></script> -->
-    <script src="  https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
-    <!-- <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/default.min.css"> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/python.min.js"></script>
-
-    <script>hljs.highlightAll();</script>
-    <script src="markdown-display.js" type="module"></script>
-
+    <script src="/assets/components/monaco-editor.js" type="module"></script>
+    <script src="/assets/components/markdown-display.js" type="module"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -56,16 +52,29 @@
             > Tests sind toll.
             > Ho
 
+            > # Test
+            > Tests sind toll.
+            > Ho
+
+            Ohne
+            Leerzeichen
+
+            Mit
+            Leerzeichen
+
             * Hi
 
             And
 
             [CENTER]
             # Hallo
+            Ich mag Kuchen.
+            Du auch?
             [/CENTER]
 
             !btn[Click me](https://gsgrobots.wixsite.com/gsg-robots)
         </markdown-display>
+        <monaco-editor />
     </main>
 
     <footer>

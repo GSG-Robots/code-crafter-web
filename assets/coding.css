@@ -1,0 +1,16 @@
+main {
+    height: calc(100%);
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+main > * {
+    flex-shrink: 1;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-y: auto;
+    max-height: 100%;
+}

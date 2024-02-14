@@ -1,26 +1,40 @@
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    width: 100dvw;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    height: 100%;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    width: 100dvw;
 
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+
+    overflow: hidden;
 }
 
 header {
-    position: sticky;
-    top: 0px;
+    flex: 0 0 auto;
+    width: 100%;
+    /* position: sticky; */
+    /* top: 0px; */
     z-index: 1;
     background-color: #bebebe;
     background: linear-gradient(to bottom, #bebebe 0%, #e0e0e0 100%);
     color: #000000;
     padding: 7.5px;
     text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+    /* border-bottom-right-radius: 10px; */
 }
 
 .center, center {
@@ -29,15 +43,18 @@ header {
 }
 
 main {
+    flex: 1 1 auto;
     display: block;
-    min-height: 60dvh;
-    margin-top: 20px;
+    /* min-height: 60dvh; */
+    /* margin-top: 20px; */
     background-color: #ffffff;
     color: #000000;
     padding: 7.5px;
     padding-left: 50px;
     padding-right: 50px;
-    margin-bottom: 75px;
+    /* margin-bottom: 75px; */
+    max-height: 100dvh;
+    overflow-y: auto;
 }
 
 @media screen and (width < 600px) {
@@ -49,8 +66,10 @@ main {
 }
 
 footer {
-    position: fixed;
-    bottom: 0px;
+    width: 100dvw;
+    flex: 0 0 auto;
+    /* position: fixed; */
+    /* bottom: 0px; */
     z-index: 1;
     /* background-color: #aaaaaa; */
     background: linear-gradient(to bottom, #cecece 0%, #838383 100%);
