@@ -30,13 +30,14 @@ header {
 
 main {
     display: block;
-    height: 60dvh;
+    min-height: 60dvh;
     margin-top: 20px;
     background-color: #ffffff;
     color: #000000;
     padding: 7.5px;
     padding-left: 50px;
     padding-right: 50px;
+    margin-bottom: 75px;
 }
 
 @media screen and (width < 600px) {
