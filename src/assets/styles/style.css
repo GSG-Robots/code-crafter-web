@@ -37,7 +37,8 @@ header {
     /* border-bottom-right-radius: 10px; */
 }
 
-.center, center {
+.center,
+center {
     display: block;
     text-align: center;
 }

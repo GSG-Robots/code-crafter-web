@@ -64,11 +64,11 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-            //   { from: "node_modules", to: "node_modules" },
-              { from: "src/_headers" },
-              { from: "src/_redirects" },
+                //   { from: "node_modules", to: "node_modules" },
+                { from: "src/_headers" },
+                { from: "src/_redirects" },
             ],
-          }),
+        }),
     ],
     entry: {
         'editor.worker': 'monaco-editor/esm/vs/editor/editor.worker.js',

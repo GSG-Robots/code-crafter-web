@@ -6,7 +6,7 @@ main {
     margin: 0px;
 }
 
-main > * {
+main>* {
     flex-shrink: 1;
     width: 100%;
     padding: 20px;

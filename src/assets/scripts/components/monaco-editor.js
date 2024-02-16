@@ -19,8 +19,8 @@ self.MonacoEnvironment = {
 };
 
 monaco.editor.create(document.querySelector("monaco-editor"), {
-    automaticLayout: true,
-    language: "html",
+	automaticLayout: true,
+	language: "html",
 
-    value: `<div>Hello World</div>`,
+	value: `<div>Hello World</div>`,
 })
