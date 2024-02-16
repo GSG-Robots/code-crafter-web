@@ -20,7 +20,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm i . && npm i -g webpack && webpack"
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development",
+    "serve": "webpack serve --watch-files src --mode development"
   },
   "repository": {
     "type": "git",
