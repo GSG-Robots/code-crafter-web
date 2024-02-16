@@ -12,11 +12,11 @@
     user-select: none;
     scroll-behavior: smooth;
 
-    cursor: url("/pen-tool.svg") 1 1, auto;
+    cursor: url("/src/assets/static/pen-tool.svg") 1 1, auto;
 }
 
 #canvas.rightclick {
-    cursor: url("/eraser-tool.svg") 8 22, auto;
+    cursor: url("/src/assets/static/eraser-tool.svg") 8 22, auto;
 }
 
 .row {
@@ -66,7 +66,7 @@
 .toolButton.selected {
     border-radius: 25%;
 
-    cursor: url("/pen-tool.svg") 1 1, auto;
+    cursor: url("/src/assets/static/pen-tool.svg") 1 1, auto;
 }
 
 
@@ -91,7 +91,7 @@
     display: flex;
     flex-direction: row;
 
-    cursor: url("/arrow-left-right.svg") 12 12, auto;
+    cursor: url("/src/assets/static/arrow-left-right.svg") 12 12, auto;
 }
 
 .colnum {

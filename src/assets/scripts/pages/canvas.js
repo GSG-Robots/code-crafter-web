@@ -25,6 +25,9 @@ function clickedBlock(event) {
     event.target.style.backgroundColor = "white";
     event.target.classList.remove("active");
   } else {
+    if (!selectedBlock) {
+      return
+    }
     event.target.style.backgroundColor = blocks[selectedBlock]["color"];
     event.target.classList.add("active");
   }

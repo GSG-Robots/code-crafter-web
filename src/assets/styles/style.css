@@ -73,7 +73,7 @@ footer {
     z-index: 1;
     /* background-color: #aaaaaa; */
     background: linear-gradient(to bottom, #cecece 0%, #838383 100%);
-    background-image: url('/assets/Brick.png');
+    background-image: url('../../assets/static/Brick.png');
     background-repeat: repeat;
     background-size: 100px;
     color: #000000;
@@ -114,7 +114,7 @@ a {
 
 
     cursor: pointer;
-    background: url('/assets/Button.png') no-repeat;
+    background: url('../../assets/static/Button.png') no-repeat;
     padding-left: 17.5px;
     padding-right: 12.5px;
     padding-top: 12.5px;
