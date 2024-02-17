@@ -1,9 +1,12 @@
+import "./components/markdown-display";
+import "./components/monaco-editor";
+
 function include_error_path(elm) {
   elm.innerHTML = "unter <code>" + window.location.pathname + "</code>";
 }
 
-function execute_bound_code(__PGRMR__code, __PRGRMR__elm) {
-  new Function(__PGRMR__code).bind(__PRGRMR__elm).call();
+function execute_bound_code(__PRGRMR__code, __PRGRMR__elm) {
+  new Function(__PRGRMR__code).bind(__PRGRMR__elm).call();
 }
 
 function run_data_load_from() {
