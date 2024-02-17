@@ -15,14 +15,14 @@ module.exports = {
                 test: /\.(css|sass|scss)$/,
                 use: ['css-loader', 'sass-loader'],
                 generator: {
-                    filename: '_assets/[contenthash:16][ext][query]',
+                    filename: 'static/assets.css/[contenthash:16][ext][query]',
                 },
             },
             {
                 test: /(\.(ico|png|jpe?g|webp|svg|gif)|site.webmanifest|browserconfig.xml)$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: '_assets/[contenthash:16][ext][query]',
+                    filename: 'static/assets[ext]/[contenthash:16][ext][query]',
                 },
             },
         ],
@@ -35,10 +35,10 @@ module.exports = {
         new HtmlBundlerPlugin({
             entry: 'src/pages',
             js: {
-                filename: '_assets/[contenthash:16].js',
+                filename: 'static/assets.js/[contenthash:16].js',
             },
             css: {
-                filename: '_assets/[contenthash:16].css',
+                filename: 'static/assets.css/[contenthash:16].css',
             },
             loaderOptions: {
 
