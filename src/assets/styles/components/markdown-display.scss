@@ -1,0 +1,100 @@
+:host blockquote {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    border-left: .25rem solid #dfe2e5;
+    margin-bottom: 1rem;
+}
+
+:host blockquote h1 {
+    all: unset;
+    margin-top: 0;
+    margin-bottom: .25rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+:host blockquote p:not(h1 + *) {
+    margin-top: 0;
+}
+
+:host blockquote p {
+    margin-bottom: 0;
+}
+
+:host blockquote.alert.alert-note {
+    border-color: #306cc8;
+}
+
+:host blockquote.alert.alert-note > h1 {
+    color: #306cc8;
+}
+
+:host blockquote.alert.alert-tip {
+    border-color: #55aa58;
+}
+
+:host blockquote.alert.alert-tip > h1 {
+    color: #55aa58;
+}
+
+:host blockquote.alert.alert-important {
+    border-color: #9a70e3;
+}
+
+:host blockquote.alert.alert-important > h1 {
+    color: #9a70e3;
+}
+
+:host blockquote.alert.alert-warning {
+    border-color: #c69026;
+}
+
+:host blockquote.alert.alert-warning > h1 {
+    color: #c69026;
+}
+
+:host blockquote.alert.alert-caution {
+    border-color: #e8554d;
+}
+
+:host blockquote.alert.alert-caution > h1 {
+    color: #e8554d;
+}
+
+:host a.btn {
+    all: unset;
+}
+
+:host button {
+    all: unset;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    background-color: rgba(0, 0, 0, .7);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+:host button:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+:host div.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+:host pre {
+    color: white;
+    padding: 1rem;
+    border-radius: .25rem;
+    background-color: #434b55;
+    margin-bottom: 1rem;
+}
+
+:host pre ::selection {
+    background-color: rgba(43, 52, 55, 1);
+}
