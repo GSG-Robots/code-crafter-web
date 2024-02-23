@@ -32,8 +32,7 @@
   "license": "ISC",
   "dependencies": {
     "highlight.js": "^11.9.0",
-    "monaco": "^1.201704190613.0",
-    "monaco-editor": "^0.46.0",
+    "monaco-editor-webpack-plugin": "^7.1.0",
     "showdown": "^2.1.0"
   }
 }

@@ -88,13 +88,17 @@
 }
 
 :host pre {
-    color: white;
+    // color: white;
+    color: black;
     padding: 1rem;
     border-radius: .25rem;
-    background-color: #434b55;
+    // background-color: #434b55;
+    background-color: #d3d3d4;
+    border: 1px solid #434b55;
     margin-bottom: 1rem;
 }
 
 :host pre ::selection {
-    background-color: rgba(43, 52, 55, 1);
+    // background-color: rgba(43, 52, 55, 1);
+    background-color: rgb(170, 166, 166);
 }

@@ -5,12 +5,10 @@
     <title>Installieren von CodeCrafter</title>
     <%~ include('src/parts/headers.html') %>
 
+        <script src="/assets/scripts/pages/coding.js"></script>
 
         <link rel="stylesheet" href="/assets/styles/coding.scss">
-      
-        <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/python.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.20.0/min/vs/editor/editor.main.css">
 </head>
 
 <body>
@@ -18,47 +16,25 @@
         <h1>CodeCrafter</h1>
     </header>
 
+    <template for="markdown-display">
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/vs.min.css">
+        <link rel="stylesheet" href="/assets/styles/components/markdown-display.scss">
+        <span id="content"></span>
+    </template>
+
     <main>
         <markdown-display>
-            # Beispiel
-            Dies ist ein Beispiel für eine Markdown-Datei. Sie enthält auch einen
-            [Link](https://gsgrobots.wixsite.com/gsg-robots).
+            # CodeCrafter
 
-            ```python
-            print("Hello World!")
-            ```
+            Bitte warte, bis die Inhalte geladen sind...
 
             > [!TIP]
-            > **Dies ist ein Tipp.**
-            > Hi
+            > Wenn du diesen Text längere Zeit siehst, lade die Seite neu, um es erneut zu versuchen.
 
-            > Test
-            > Tests sind toll.
-            > Ho
-
-            > # Test
-            > Tests sind toll.
-            > Ho
-
-            Ohne
-            Leerzeichen
-
-            Mit
-            Leerzeichen
-
-            * Hi
-
-            And
-
-            [CENTER]
-            # Hallo
-            Ich mag Kuchen.
-            Du auch?
-            [/CENTER]
-
-            !btn[Click me](https://gsgrobots.wixsite.com/gsg-robots)
         </markdown-display>
-        <monaco-editor></monaco-editor>
+        <!-- <iframe src="/pages/__monaco_editor.html" title="Coding"></iframe> -->
+        <div class="monaco-editor"></div>
     </main>
 
     <footer>

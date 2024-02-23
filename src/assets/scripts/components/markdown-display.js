@@ -1,4 +1,8 @@
-// import * as showdown from 'https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js';
+import showdown from 'showdown/dist/showdown';
+import hljs from 'highlight.js/lib/core';
+import python from 'highlight.js/lib/languages/python';
+
+hljs.registerLanguage('python', python);
 
 
 const converter = new showdown.Converter({
@@ -193,7 +197,6 @@ function markdownToHTML(
     content = "No content provided.",
 ) {
     const html = converter.makeHtml(content);
-    console.log(content)
     return html;
 }
 
@@ -210,8 +213,13 @@ export default class MarkdownDisplay extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
 
+        this.shadowRoot.innerHTML = document.querySelector('template[for="markdown-display"]').innerHTML;
+
         this._interval_id = null;
         this._cache = "";
+
+        this.redraw = this.redraw.bind(this);
+        this.redrawIfChanged = this.redrawIfChanged.bind(this);
     }
 
     static get observedAttributes() {
@@ -225,13 +233,11 @@ export default class MarkdownDisplay extends HTMLElement {
     set interval(value) {
         this.setAttribute('interval', value);
         clearInterval(this._interval_id);
-        console.log(this.interval, this._interval_id)
         if (this.interval === -1) return;
         this._interval_id = setInterval(this.redrawIfChanged.bind(this), this.interval);
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        console.log(name, oldValue, newValue);
         if (name === 'interval') {
             if (oldValue === newValue) return;
             this.interval = parseInt(this.getAttribute('interval') || "-1") || -1;
@@ -239,14 +245,15 @@ export default class MarkdownDisplay extends HTMLElement {
     }
 
     connectedCallback() {
-        this.redraw();
+        // whyever this is necessary... but it is
+        setTimeout(() => {
+            this.redrawIfChanged();
+        }, 0);
 
         this.interval = parseInt(this.getAttribute('interval') || "-1") || -1;
     }
 
     disconnectedCallback() {
-        this.shadowRoot.innerHTML = '';
-
         clearInterval(this._interval_id);
     }
 
@@ -262,13 +269,13 @@ export default class MarkdownDisplay extends HTMLElement {
     }
 
     redraw() {
-        const html = markdownToHTML(this.innerMarkdown);
-        this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+        const html = markdownToHTML(this.innerMarkdown);;
+        this.shadowRoot.getElementById("content").innerHTML = `
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/vscode-dark.min.css">
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
         <style>
             ${markdownStylesExtra}
-        </style>
+        </style>-->
         ${html}
         `;
     }

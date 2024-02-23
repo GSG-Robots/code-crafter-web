@@ -1,26 +1,14 @@
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
+import 'monaco-editor/esm/vs/basic-languages/python/python.contribution';
 
-self.MonacoEnvironment = {
-	getWorkerUrl: function (moduleId, label) {
-		if (label === 'json') {
-			return './json.worker.bundle.js';
-		}
-		if (label === 'css' || label === 'scss' || label === 'less') {
-			return './css.worker.bundle.js';
-		}
-		if (label === 'html' || label === 'handlebars' || label === 'razor') {
-			return './html.worker.bundle.js';
-		}
-		if (label === 'typescript' || label === 'javascript') {
-			return './ts.worker.bundle.js';
-		}
-		return './editor.worker.bundle.js';
-	}
-};
-
-monaco.editor.create(document.querySelector("monaco-editor"), {
-	automaticLayout: true,
-	language: "html",
-
-	value: `<div>Hello World</div>`,
-})
+document.addEventListener('DOMContentLoaded', function () {
+    const editorSpace = document.querySelector(".monaco-editor");
+    monaco.editor.create(editorSpace, {
+        value: "print('Hello, World!')",
+        language: "python",
+        automaticLayout: true,
+        minimap: {
+            enabled: true
+        }
+    });
+});
