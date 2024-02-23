@@ -157,10 +157,13 @@ function ownPlugin() {
             {
                 type: 'lang',
                 filter: function (text, converter) {
-                    text = text.replace(/> \[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\](?:\s)*(\n(?:> (?:.+?)\n)*)/gsi, function (wholeMatch, type, content) {
-                        let new_content = ("\n" + content).replace(/(?:\n)> /gmi, '<br>').replace(/^\s*<br>/, '');
+                    console.log(text)
+                    text = text.replace(/> \[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\](?:\s)*(\n(?:[ \t]*> (?:\s|\S)+?\n)*)/gsi, function (wholeMatch, type, content) {
+                        let new_content = ("\n" + content).replace(/(?:\n)\> /gmi, '<br>').replace(/^\s*<br>/, '');
+                        console.log("!!!", new_content)
                         return '<blockquote class="alert alert-' + type.toLowerCase() + '"><h1 class="alert-title">' + gfmAlertsMap[type] + '</h1><p class="alert-content">' + converter.makeHtml(new_content) + '</p></blockquote>';
                     });
+                    console.log(text)
                     return text;
                 }
             },
@@ -176,7 +179,7 @@ function ownPlugin() {
             {
                 type: "output",
                 filter: function (text) {
-                    text = text.replace(/<pre><code class=".+?language-(\S+?)(?:\s+(?:.+?)?)?">(.*)<\/code><\/pre>/gsi, function (wholeMatch, lang, content) {
+                    text = text.replace(/<pre><code class=".+?language-(\S+?)(?:\s+(?:.+?)?)?">(.+?)<\/code><\/pre>/gsi, function (wholeMatch, lang, content) {
                         return '<pre><code class="language-' + lang + '">' + hljs.highlight(content, { language: lang }).value + '</code></pre>';
                     });
                     return text;
