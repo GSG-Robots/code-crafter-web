@@ -1,0 +1,11 @@
+{
+  "title": "404 - CodeCrafter",
+  "header": "CodeCrafter",
+  "subtitle-1": "404 - Page not found",
+  "details": "The requested page {urlpath} could not be found.<br><br>{backToHomeLink}",
+  "backToHomeLink": "Back to Startpage",
+  "footer": "Made by {link1} | {link2} | {link3}<br>{langSelect}",
+  "footer-homepage": "GSG Robots",
+  "footer-privacy": "Privacy",
+  "footer-contact": "Contact us"
+}

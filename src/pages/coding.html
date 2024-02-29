@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Installieren von CodeCrafter</title>
+    <%~ include('src/parts/headers.html') %>
+
+        <script src="/assets/scripts/pages/coding.js"></script>
+
+        <link rel="stylesheet" href="/assets/styles/coding.scss">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.20.0/min/vs/editor/editor.main.css">
+</head>
+
+<body>
+    <header>
+        <h1>CodeCrafter</h1>
+    </header>
+
+    <template for="markdown-display">
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/vs.min.css">
+        <link rel="stylesheet" href="/assets/styles/components/markdown-display.scss">
+        <span id="content"></span>
+    </template>
+
+    <main>
+        <markdown-display>
+            # CodeCrafter
+
+            Bitte warte, bis die Inhalte geladen sind...
+
+            > [!TIP]
+            > Wenn du diesen Text längere Zeit siehst, lade die Seite neu, um es erneut zu versuchen.
+
+        </markdown-display>
+        <!-- <iframe src="/pages/__monaco_editor.html" title="Coding"></iframe> -->
+        <div class="monaco-editor"></div>
+    </main>
+
+    <footer>
+        <section>
+            Gemacht von <a href="https://gsgrobots.wixsite.com/gsg-robots">GSG Robots</a> | <a
+                href="https://gsgrobots.wixsite.com/gsg-robots/disclaimer">Datenschutz / Impressum</a> | <a
+                href="https://gsgrobots.wixsite.com/gsg-robots/kontakt">Kontakt</a>
+        </section>
+    </footer>
+</body>
+
+</html>
