@@ -41,4 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
         tutorialDisplay.innerHTML = "# CodeCrafter\nHier wird nichts angezeigt, weil kein Tutorial gewählt wurde.";
         tutorialDisplay.redraw();
     }
+
+    if (window.innerHeight > window.innerWidth) {
+        alert("Auf Mobilgeräten funktioniert diese Seite im Querformat besser.");
+    }
 });
